@@ -12,4 +12,4 @@ rm jdk.deb && \
 sudo apt-get autoclean && sudo apt-get clean
 
 RUN echo "export JAVA_HOME=/usr/lib/jvm/jdk-17/" >> ~/.bashrc && \
-echo "export PATH=$PATH:$JAVA_HOME/bin" >> ~/.bashrc
+echo "export PATH=$PATH:/usr/lib/jvm/jdk-17/bin" >> ~/.bashrc
