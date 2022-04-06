@@ -10,3 +10,8 @@ curl -o jdk.deb https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.
 sudo dpkg -i jdk.deb && \
 rm jdk.deb && \
 sudo apt-get autoclean && sudo apt-get clean
+
+RUN cat <<EOF >> ~/.bashrc
+export JAVA_HOME=/usr/lib/jvm/jdk-17/
+export PATH=$PATH:$JAVA_HOME/bin
+EOF
