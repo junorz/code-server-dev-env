@@ -11,7 +11,5 @@ sudo dpkg -i jdk.deb && \
 rm jdk.deb && \
 sudo apt-get autoclean && sudo apt-get clean
 
-RUN cat <<EOF >> ~/.bashrc
-export JAVA_HOME=/usr/lib/jvm/jdk-17/
-export PATH=$PATH:$JAVA_HOME/bin
-EOF
+RUN echo "export JAVA_HOME=/usr/lib/jvm/jdk-17/" >> ~/.bashrc && \
+echo "export PATH=$PATH:$JAVA_HOME/bin" >> ~/.bashrc
